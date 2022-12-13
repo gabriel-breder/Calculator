@@ -1,6 +1,6 @@
 package operations;
 
-public class OpNumReais extends Operations {
+public class OpNumReais extends Operacoes {
 
   @Override
   public String adicao(String a, String b) {
