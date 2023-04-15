@@ -1,10 +1,11 @@
 package gui;
+
 import operations.OpNumComplexos;
 import operations.OpNumReais;
 import java.awt.*;
 import java.util.Stack;
 
-public class FuncoesBtn {
+public class Botao {
   private static Stack<String> numeros = new Stack<String>();
   private static String resultado;
   private static boolean clear;
@@ -93,12 +94,14 @@ public class FuncoesBtn {
             a = numeros.pop();
             b = numeros.pop();
             if(a.contains("i") || b.contains("i")) {
+              System.out.println("aqui");
               resultado = calcComplexos.adicao(a, b);
             }
             else resultado = calcReais.adicao(a, b);
             visor.setText(resultado);
             numeros.push(resultado);
           } catch (Exception e) {
+            System.out.println(e);
             System.out.println("a lista ta vazia");
           }
           break;

@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Calculatora {
+public class Calculadora {
   private JFrame janela;
   private final int LARGURA_JANELA = 400;
   private final int ALTURA_JANELA = 700;
@@ -15,7 +15,7 @@ public class Calculatora {
     "0", "i", ".", "="
   };
   
-  public Calculatora() {
+  public Calculadora() {
     janela = new JFrame("Calculator");
     janela.setSize(LARGURA_JANELA, ALTURA_JANELA);
     janela.setLocationRelativeTo(null);
@@ -35,7 +35,7 @@ public class Calculatora {
       botao.setBackground(Color.white);
       botao.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
-          FuncoesBtn.click(nome, visor);
+          Botao.click(nome, visor);
         }
       });
       painel.add(botao);
